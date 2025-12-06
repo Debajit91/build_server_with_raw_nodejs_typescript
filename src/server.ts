@@ -41,7 +41,7 @@ const server: Server = http.createServer(
       req.on("end", () => {
         try {
           const parsed = JSON.parse(body);
-          console.log(body);
+          console.log(parsed);
           res.end(JSON.stringify(parsed));
         } catch (error: any) {
           console.log(error?.message);
